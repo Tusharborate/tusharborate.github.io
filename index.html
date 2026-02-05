@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tushar Borate | Portfolio</title>
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --text-color: #f8fafc;
+        --accent-color: #38bdf8;
+        --secondary-bg: #1e293b;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.95);
+        padding: 1rem 0;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+          url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+
+      section {
+        padding: 100px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: var(--secondary-bg);
+        padding: 2.5rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .skill-badge {
+        background: rgba(56, 189, 248, 0.1);
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      #email-container a {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 2px solid transparent;
+        transition: 0.3s;
+      }
+
+      #email-container a:hover {
+        border-bottom: 2px solid var(--accent-color);
+      }
+
+      footer {
+        text-align: center;
+        padding: 50px;
+        opacity: 0.6;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+      }
+      h2 {
+        color: var(--accent-color);
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+      }
+      .highlight {
+        color: var(--accent-color);
+      }
+      p {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home">
+      <h1>Tushar <span class="highlight">Borate</span></h1>
+      <p>Senior UI Developer | React & WordPress Specialist</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I am a Senior UI Developer with over 9 years of experience crafting
+          high-performance, responsive web applications. My expertise lies in
+          the React ecosystem, modern JavaScript, and building robust CMS
+          solutions.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-badge">React.js</div>
+        <div class="skill-badge">JavaScript (ES6+)</div>
+        <div class="skill-badge">PHP</div>
+        <div class="skill-badge">WordPress</div>
+        <div class="skill-badge">HTML5 & CSS3</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <div class="card">
+        <p>
+          I'm always open to discussing new projects or creative opportunities.
+        </p>
+        <div id="email-container"></div>
+      </div>
+    </section>
+
+    <footer>&copy; 2026 Tushar Borate.</footer>
+
+    <script>
+      // Anti-spam email protection
+      (function () {
+        const user = "borate.tushar";
+        const domain = "gmail.com";
+        const container = document.getElementById("email-container");
+
+        // Create the clickable link dynamically
+        const emailLink = document.createElement("a");
+        emailLink.href = "mailto:" + user + "@" + domain;
+        emailLink.innerText = user + "@" + domain;
+
+        container.appendChild(emailLink);
+      })();
+    </script>
+  </body>
+</html>
